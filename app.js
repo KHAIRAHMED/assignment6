@@ -19,7 +19,7 @@ inputAndSearch(naturalInput,naturalSearchButton);
 
 function inputAndSearch(input,searchButton){
 input.addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
+  if (event.keyCode === 13) {
    searchButton.click();
   }
 })};
@@ -69,8 +69,8 @@ const selectItem = (event, img) => {
     sliders.push(img);
   } else {
   element.classList.remove('added');
-  sliders.pop()
-
+  delete sliders[item]
+  
   }
 }
 var timer
